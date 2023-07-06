@@ -1,24 +1,23 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Card from '../components/Card'
+import Carousal from '../components/Carousal'
 
-export default function 
-() {
+export default function
+  () {
   return (
     <>
-    <div>
-        <Navbar/>
-    </div>
-    <div className="card mt-3" style={{"width": "18rem","maxHeight":"360px"}}>
-    <img src="..." className="card-img-top" alt="..."/>
-    <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">This is some important demo text</p>
-  </div>
-</div>
-    <div>
-        <Footer/>
-    </div>
+      <div><Navbar /></div>
+      <div><Carousal/></div>
+      <div className='m-3 rounded'>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      </div>
+
+      <div><Footer /></div>
     </>
   )
 }
