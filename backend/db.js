@@ -25,6 +25,7 @@ module.exports = function (callback) {
                 const categoryCollection = await mongoose.connection.db.collection("Categories");
                 categoryCollection.find({}).toArray(async function (err, Catdata) {
                     callback(err, data, Catdata);
+                    // console.log(data) //this line is for printing data
 
                 })
             });

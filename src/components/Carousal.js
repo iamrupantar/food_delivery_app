@@ -1,30 +1,39 @@
 import React from 'react'
 
-export default function Card() {
+export default function Carousal() {
     return (
-        <div><div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>
-            <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" className="card-img-top" alt="..." />
-            <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">This is some important demo text</p>
-                <div className="container w-100">
-                    <select className="m-2 h-100 bg-success rounded bg-success">
-                        {Array.from(Array(6), (e, i) => {
-                            return (
-                                <option key={i + 1} value={i + 1}> {i + 1} </option>
-                            )
-                        })}
-                    </select>
+        <div>
+            <div id="carouselExampleFade" className="carousel slide carousel-fade rounded" data-bs-ride="carousel" style={{ objectFit:"contain !important"}}>
+                <div className="carousel-inner" id="carousel">
+                    <div className="carousel-caption" style={{zIndex:"10"}}>
+                        <form className="d-flex">
+                            <input className="form-control me-2 rounded" type="search" placeholder="Search the food item" aria-label="Search" />
+                            <button className="btn btn-outline-success text-white" type="submit">Search</button>
+                        </form>
+                    </div>
 
-                    <select className="m-2 h-100 bg-success rounded bg-success">
-                        <option value="half">Half</option>
-                        <option value="full">Full</option>
-                    </select>
-                    <div className="price d-inline fs-5 h-100">
-                        Total Price:
+
+                    <div className='carousel-image'>
+                    <div className="carousel-item active">
+                        <img src="https://source.unsplash.com/random/800×700/?indian-food" className="d-block w-100" style={{filter: "brightness(30%)"}} alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://source.unsplash.com/random/800×700/?pastry" className="d-block w-100" style={{filter: "brightness(30%)"}} alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://source.unsplash.com/random/800×700/?burger" className="d-block w-100" style={{filter: "brightness(30%)"}} alt="..." />
+                    </div>
                     </div>
                 </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
             </div>
-        </div></div>
+        </div>
     )
 }
