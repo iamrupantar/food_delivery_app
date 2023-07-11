@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
 const axios = require('axios')
 const fetch = require('../middleware/fetchdetails');
-const jwtSecret = "MyNameIsRupantarChakraborty"
+const jwtSecret = "HaHa"
 
 router.post("/creatuser", [
     body('email', 'Error! ,Enter a valid email').isEmail(),
