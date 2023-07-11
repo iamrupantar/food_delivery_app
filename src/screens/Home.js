@@ -40,7 +40,7 @@ export default function Home() {
           <div className="carousel-inner" id="carousel">
             <div className="carousel-caption" style={{ zIndex: "10" }}>
               <div className=" d-flex justify-content-center ">
-                <input className="div-control me-2 rounded" type="search" placeholder="Search the food item" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}}/>
+                <input className="form-control me-2 w-75 bg-black text-light " type="search" placeholder="Search the food item" aria-label="Search" value={search} onChange={(e) => { setSearch(e.target.value) }} />
                 {/* <button className="btn btn-outline-success text-white" type="submit">Search</button> */}
               </div>
             </div>
@@ -82,18 +82,18 @@ export default function Home() {
                   </div>
                   <hr />
 
-                  {foodItems !== [] ? 
-                  foodItems.filter((item) => (item.CategoryName === data.CategoryName) && (item.name.toLowerCase().includes(search.toLocaleLowerCase()))) 
-                    .map(filterItems => {
-                      return (
-                        <div key={filterItems._id} className='col-12 col-md-6 col-lg-3'>
-                          <Card foodName={filterItems.name}
-                            options={filterItems.options[0]}
-                            imgsrc={filterItems.img}
-                          ></Card>
-                        </div>
-                      )
-                    }) : <div>No such data found</div>}
+                  {foodItems !== [] ?
+                    foodItems.filter((item) => (item.CategoryName === data.CategoryName) && (item.name.toLowerCase().includes(search.toLocaleLowerCase())))
+                      .map(filterItems => {
+                        return (
+                          <div key={filterItems._id} className='col-12 col-md-6 col-lg-3'>
+                            <Card foodName={filterItems.name}
+                              options={filterItems.options[0]}
+                              imgsrc={filterItems.img}
+                            ></Card>
+                          </div>
+                        )
+                      }) : <div>No such data found</div>}
 
                 </div>
               )
