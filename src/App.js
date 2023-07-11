@@ -12,16 +12,15 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 function App() {
   return (
-    <Router>
-      <div > 
-        <Routes>
-          <Route exact path = "/" element={<Home/>}/>
-          <Route exact path = "/login" element={<Login/>}/>
-          <Route exact path = "/creatuser" element={<SignUp/>}/>
-        </Routes>
-      </div>
-       
-    </Router>
+      <Router>
+        <div>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/creatuser" element={<SignUp />} />
+          </Routes>
+        </div>
+      </Router>
   );
 }
 

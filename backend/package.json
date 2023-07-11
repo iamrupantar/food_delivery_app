@@ -1,12 +1,12 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "This is the file working as a backend for the FoodCart page",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Rupantar Chakraborty",
+  "author": "Rupantar",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
@@ -16,6 +16,6 @@
     "json-stringify-safe": "^5.0.1",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^6.10.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.1"
   }
 }
