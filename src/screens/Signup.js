@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Link, json } from 'react-router-dom'
+import { Link, json ,useNavigate} from 'react-router-dom'
 
 export default function SignUp() {
     const [credentials, setcredentials] = useState({ name: "", email: "", password: "", geolocation: "" })
-
+    let navigate=useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault(); // synthetic event
         const response = await fetch("http://localhost:5000/api/creatuser", {
@@ -20,6 +20,10 @@ export default function SignUp() {
 
         if (!isSuccess) {
             alert("Enter valid credentials")
+        }
+        else{
+            alert("Success! UserID Created")
+            navigate("/login");
         }
     }
     const onChange = (event) => {
