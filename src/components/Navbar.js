@@ -40,7 +40,7 @@ export default function Navbar() {
                                     <div className='btn bg-white text-success mx-1'>
                                         My Cart
                                     </div>
-                                    <div className='btn bg-white text-success mx-1' onClick={handleLogout}>
+                                    <div className='btn bg-white text-danger mx-1' onClick={handleLogout}>
                                         LogOut
                                     </div>
                                 </div>
