@@ -26,10 +26,6 @@ export default function Home() {
     loadData();
   }, [])
 
-
-
-
-
   return (
     <>
       <div><Navbar /></div>
@@ -77,7 +73,7 @@ export default function Home() {
             ? foodCat.map((data) => {
               return (
                 <div className='row mb-3'>
-                  <div key={data.id} className='fs-3 m-3'>
+                  <div key={data.id} className='fs-3 m-3 fw-bold'>
                     {data.CategoryName}
                   </div>
                   <hr />

@@ -44,7 +44,7 @@ let navigate=useNavigate()
                         <label htmlFor="exampleInputPassword1">Password</label>
                         <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name='password' value={credentials.password} onChange={onChange} />
                     </div>
-                    <button type="submit" className="m-3 btn btn-success">Submit</button>
+                    <button type="submit" className="m-3 btn btn-info">Submit</button>
                     <Link to="/creatuser" className='m-3 btn btn-danger'>New user?, SignUp</Link>
                 </form>
             </div>
