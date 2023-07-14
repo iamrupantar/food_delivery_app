@@ -46,6 +46,10 @@ let navigate=useNavigate()
                     </div>
                     <button type="submit" className="m-3 btn btn-info">Submit</button>
                     <Link to="/creatuser" className='m-3 btn btn-danger'>New user?, SignUp</Link>
+                    <div className='d-flex align-items-between'>
+                    <Link to="/" className='m-3 w-25  btn btn-danger'>Home</Link>
+                    </div>
+                    
                 </form>
             </div>
         </>

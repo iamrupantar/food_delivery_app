@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Badge from 'react-bootstrap/Badge';
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -38,7 +39,8 @@ export default function Navbar() {
 
                                 <div>
                                     <div className='btn bg-white text-info mx-1 fw-bold'>
-                                        My Cart
+                                        My Cart{" "}
+                                        <Badge className='m-1' pill bg="danger">2</Badge>
                                     </div>
                                     <div className='btn bg-white text-danger mx-1 fw-bold' onClick={handleLogout}>
                                         LogOut

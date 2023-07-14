@@ -8,10 +8,12 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+
 import '../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import PuffLoader from "react-spinners/PuffLoader";
+import { CartProvider } from './components/ContextReducer';
 function App() {
   const [loading, setloading] = useState(false);
   useEffect(() => {
@@ -22,27 +24,33 @@ function App() {
   }, [])
 
   return (
-    <Router>
-      {
-        loading ?
-          <PuffLoader className='puffload'
-            size={150}
-            color='#17a2b8'
-            loading={loading}
-          />
-          
+    <CartProvider>
+      <Router>
+        {
+          loading ?
+            <PuffLoader className='puffload'
+              size={150}
+              color='#17a2b8'
+              loading={loading}
+            />
+            // <div class="d-flex justify-content-center align-items-center spinner-border text-info" role="status">
+            //   <span class="sr-only">Loading...</span>
+            // </div>
 
-          :
-          <div>
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/login" element={<Login />} />
-              <Route exact path="/creatuser" element={<SignUp />} />
-            </Routes>
-          </div>
-      }
 
-    </Router>
+            :
+            <div>
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/login" element={<Login />} />
+                <Route exact path="/creatuser" element={<SignUp />} />
+              </Routes>
+            </div>
+        }
+
+      </Router>
+    </CartProvider>
+
   );
 }
 
