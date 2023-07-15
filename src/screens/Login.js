@@ -20,6 +20,7 @@ let navigate=useNavigate()
             alert("Enter valid credentials");
         }
         if(json.success){
+            localStorage.setItem("userEmail",credentials.email);
             localStorage.setItem("authToken",json.authToken);
             console.log(localStorage.getItem("authToken"))
             navigate("/");

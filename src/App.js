@@ -14,6 +14,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import PuffLoader from "react-spinners/PuffLoader";
 import { CartProvider } from './components/ContextReducer';
+
 function App() {
   const [loading, setloading] = useState(false);
   useEffect(() => {
@@ -33,11 +34,6 @@ function App() {
               color='#17a2b8'
               loading={loading}
             />
-            // <div class="d-flex justify-content-center align-items-center spinner-border text-info" role="status">
-            //   <span class="sr-only">Loading...</span>
-            // </div>
-
-
             :
             <div>
               <Routes>
@@ -47,7 +43,6 @@ function App() {
               </Routes>
             </div>
         }
-
       </Router>
     </CartProvider>
 
