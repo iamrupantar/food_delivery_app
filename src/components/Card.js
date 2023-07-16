@@ -45,7 +45,7 @@ export default function Card(props) {
             <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>
                 <img src={props.foodItem.img} className="card-img-top" alt="Food_item_image" style={{ height: "140px", objectFit: "fill" }} />
                 <div className="card-body ">
-                    <h5 className="card-title">{props.foodItem.name}</h5>
+                    <h5 className="d-inline  card-title fw-bold">{props.foodItem.name}</h5>
                     {/* <p className="card-text">This is some important demo text</p> */}
                     <div className="container w-100">
                         <select className="m-2 h-100 bg-info rounded bg-info" onChange={(e)=>{setQty(e.target.value)}}>
@@ -66,7 +66,7 @@ export default function Card(props) {
                                 })
                             }
                         </select>
-                        <div className="price d-inline  fs-5 h-100">
+                        <div className="price d-flex  fs-5 h-100">
                             Total Price: ₹{finalPrice}/-
                         </div>
                         

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Navbar from '../components/Navbar'
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
@@ -31,28 +32,32 @@ let navigate=useNavigate()
     }
     return (
         <>
+        <Navbar/>
+        <div style={{backgroundImage: 'url("https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")', height: '100vh', backgroundSize: 'cover'}}>
+            
             <div className="container d-flex justify-content-center">
                 <form onSubmit={handleSubmit}>
                     {
-                        <h1>SignIn</h1>
+                        <h1 className='fw-bold'>SignIn</h1>
                     }
-                    <div className="form-group">
+                    <div className="form-group fw-bold">
                         <label htmlFor="exampleInputEmail1">Email address</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name='email' value={credentials.email} onChange={onChange} />
-                        <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                        {/* <small id="emailHelp" className="form-text">We'll never share your email with anyone else.</small> */}
                     </div>
-                    <div className="form-group">
+                    <div className="form-group fw-bold">
                         <label htmlFor="exampleInputPassword1">Password</label>
                         <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name='password' value={credentials.password} onChange={onChange} />
                     </div>
-                    <button type="submit" className="m-3 btn btn-info">Submit</button>
-                    <Link to="/creatuser" className='m-3 btn btn-danger'>New user?, SignUp</Link>
+                    <button type="submit" className="m-3 btn btn-info fw-bold">Submit</button>
+                    <Link to="/creatuser" className='m-3 btn btn-danger fw-bold'>New user?, SignUp</Link>
                     <div className='d-flex align-items-between'>
-                    <Link to="/" className='m-3 w-25  btn btn-danger'>Home</Link>
+                    <Link to="/" className='m-3 w-25  btn btn-danger fw-bold'>Home</Link>
                     </div>
                     
                 </form>
             </div>
+        </div>
         </>
     )
 }

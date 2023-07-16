@@ -2,6 +2,7 @@ import './App.css';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import SignUp from './screens/Signup';
+import MyOrder from './screens/MyOrder';
 import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
@@ -40,6 +41,7 @@ function App() {
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/login" element={<Login />} />
                 <Route exact path="/creatuser" element={<SignUp />} />
+                <Route exact path="/myOrder" element={<MyOrder />} />
               </Routes>
             </div>
         }
