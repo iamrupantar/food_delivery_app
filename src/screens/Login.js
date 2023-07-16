@@ -35,7 +35,7 @@ let navigate=useNavigate()
         <Navbar/>
         <div style={{backgroundImage: 'url("https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")', height: '100vh', backgroundSize: 'cover'}}>
             
-            <div className="container d-flex justify-content-center">
+            <div className="container d-flex justify-content-center pt-5">
                 <form onSubmit={handleSubmit}>
                     {
                         <h1 className='fw-bold'>SignIn</h1>
